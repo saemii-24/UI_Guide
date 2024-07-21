@@ -1,23 +1,25 @@
 {
-  "name": "@uiguid/themes",
+  "name": "@uiguide/themes",
   "version": "0.0.1",
   "type": "module",
   "main": "dist/index.js",
-  "export": {
+  "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./themes.css": "./dist/themes.css"
   },
   "scripts": {
-    "build": "npm run clean && npm run build:js && npm run build:type",
+    "build": "npm run clean && npm run build:js && npm run build:type && npm run build:css",
     "build:js": "node build.js",
     "build:type": "tsc --emitDeclarationOnly",
-    "clean": "rm -rf disf"
+    "build:css": "node ./scripts/build-css-module.js",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "esbuild": "^0.16.17",
-    "typescript": "^5.5.3"
+    "typescript": "^5.2.2"
   }
 }
