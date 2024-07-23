@@ -79,12 +79,6 @@ const generateThemeCssVariables = () => {
   return cssString;
 };
 
-// .headingxl {
-//   font-size: 3rem;
-//   font-weight: 700;
-//   line-height: 100%;
-// }
-
 const generateThemeCssClasses = () => {
   const cssString = [];
 
